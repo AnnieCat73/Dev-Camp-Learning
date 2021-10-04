@@ -1,0 +1,266 @@
+:root {
+  --spacer: 1rem;
+  --ff-sans: font-family: "Rubik", sans-serif;;
+
+  /* small screen font-sizes */
+
+  --fs-300: 1.125rem; /*18pp*/
+  --fs-400: 1.5rem; /*24px*/
+  --fs-500: 1.75rem; /*18px*/
+  --fs-600: 1.25rem; /*20px*/
+  --fs-700: 1.313rem; /*21px*/
+  --fs-900: 2.25rem; /*36px*/
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --clr-primary-100: #ffffff;/*all the white stuff*/
+  --clr-secondary-800: #0f0a33;/*dark blue bg, heading + pricing all text*/
+
+  --clr-neutral-300: #bcbac4; /*greyish text on most <p>texts*/
+  --clr-neutral-400: #707d76;/* text color on flexibel/exper in hero*/
+  --clr-neutral-500: #6b687b; /*name of course creator text*/
+  --clr-neutral-600: #848695;/*Flex/Exp tick boxes*/
+  --clr-neutral-800: #555555;/*sign in btn/membship Easily..flexibl headimgs etc/test heading name + plan member txt*/
+
+  --clr-bg-300: #e2f6eb;/*bg header/hero/membership*/
+
+  --clr-accent-600: #3dc37a; /*for green btns*/
+  --clr-accent-700: #edc846;/*for yellow text*/
+
+
+ 
+
+
+  
+
+  --br-100: 1rem;
+
+  --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+
+/*main img can use clip-path to clip part of img*/
+/*icons
+-check circle: <i class="fas fa-check-circle"></i>/*
+-Boxes: heart: <i class="fas fa-heart"></i>
+        camera: <i class="fas fa-camera"></i>
+        no heart monitor but desktop: <i class="far fa-lightbulb"></i>
+        clock: <i class="far fa-clock"></i>
+        dollar-sign: <i class="fas fa-dollar-sign"></i>
+        light: <i class="far fa-lightbulb"></i>//CAN DO CIRCLE WITH PESUDO ELEMENT
+        
+        full star: <i class="fas fa-star"></i>
+        empty star: <i class="far fa-star"></i>
+
+        less than > for carousel: <i class="fas fa-angle-left"></i>
+        or this one with circle: <i class="fas fa-chevron-circle-left"></i>
+
+        more than <: <i class="fas fa-angle-right"></i>
+        or this one with circle: <i class="fas fa-chevron-circle-right"></i>
+        
+        x-btn-red: <i class="fas fa-times-circle"></i>
+        tick/check in plans: <i class="fas fa-check"></i>*/
+
+
+@media (min-width: 40em) {
+  :root {
+  }
+}
+
+/******* Reset ********/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd,
+i,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+svg,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  line-height: 1.6;
+  font-family: var(--ff-sans);
+}
+
+
+
+/***** Typography *********/
+
+.heading {
+  color: var(--clr-secondary-800);
+  font-weight: 700;
+}
+
+.section-title {
+  color: var(--clr-secondary-800);
+  font-weight: 700;
+}
+
+.text {
+
+}
+
+.text-light {
+  color: var(--clr-primary-100);
+}
+
+.box-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+/***** Utility Classes *****/
+
+.bg-light {
+
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em 2em;
+  border-radius: 1.8em;
+  font-weight: 700;
+  font-size: ;
+}
+
+.btn-accent {
+  background-color: var(--clr-accent-600);
+  color: var(--clr-primary-100);
+}
+
+.btn-light {
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-800);
+}
+
+
+
+/***** General Layout *****/
+
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+
+.flow-content {
+
+}
+
+
+
+
+
+
+
+/****** Components **********/
+
+/* header */
+
+
+/* hero */
+
+.heading span {
+  color: var(--clr-accent-700);
+}
+
+
+/* courses */
+
+
+.course-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.course {
+  text-align: left;
+  flex: 1 1 100%;/*%needs to change when larger screens*/
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0.5em;
+  align-items: center;
+  padding: 0.5em 2em 0.5em 0.5em;
+  margin: 1em;
+}
+
+ .course-img {
+  width: 10rem;
+  height: 7rem;
+  border-radius: 0.25em;
+}
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+.course-name {
+  color: var(--clr-secondary-800);
+}
+
+.course-author {
+  color: var(--clr-neutral-800);
+}
+
+.course-info-bottom .full-star {
+  color: var(--clr-accent-700);
+}
+
+.course-info-bottom .empty-star {
+  color: var(--clr-neutral-300);
+}
+
+.course-info-bottom .comments {
+  color: var(--clr-neutral-300);
+}
