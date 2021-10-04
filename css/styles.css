@@ -141,8 +141,16 @@ body {
   font-weight: 700;
 }
 
-.text {
+.text-black {
+  color: var(--clr-secondary-800);
+  font-size: ;
+  font-weight: ;
+}
 
+.text-grey {/*if no other has same then move this compo membership*/
+  color: var(--clr-neutral-600);
+  font-size: ;
+  font-weight: ;
 }
 
 .text-light {
@@ -156,8 +164,15 @@ body {
 /***** Utility Classes *****/
 
 .bg-light {
-
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-800);
 }
+
+.bg-blue {
+  background-color: var(--clr-secondary-800);
+  color: var(--clr-primary-100);
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
