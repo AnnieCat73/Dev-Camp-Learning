@@ -131,6 +131,9 @@ body {
 
 /***** Typography *********/
 
+span {
+  color: var(--clr-accent-700);
+}
 .heading {
   color: var(--clr-secondary-800);
   font-weight: 700;
@@ -159,6 +162,10 @@ body {
 
 .box-shadow {
   box-shadow: var(--box-shadow);
+}
+
+.name {
+  color: var(--clr-secondary-800);
 }
 
 /***** Utility Classes *****/
@@ -224,9 +231,7 @@ section {
 
 /* hero */
 
-.heading span {
-  color: var(--clr-accent-700);
-}
+
 
 
 /* courses */
@@ -260,9 +265,7 @@ section {
   flex-direction: column;
   gap: .5em;
 }
-.course-name {
-  color: var(--clr-secondary-800);
-}
+
 
 .course-author {
   color: var(--clr-neutral-800);
@@ -278,4 +281,102 @@ section {
 
 .course-info-bottom .comments {
   color: var(--clr-neutral-300);
+}
+
+/* membership */
+
+
+
+/* testimonials */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-track-container {
+  background-color: aquamarine;
+  padding: .5em;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel .button-left {
+  align-self: flex-start;
+  left: -4px;
+  position: absolute;
+  z-index: 1;
+  /*top: 50%;
+  transform: translateX(-70%);*/
+}
+.carousel .button-right {
+  align-self: flex-end;
+  position: absolute;
+  right: - 18px;
+  /*top: 50%;
+  transform: translateY(-50%);*/
+}
+
+.carousel-slide .member {
+  display: flex;
+}
+
+.carousel .member-details {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.carousel blockquote {
+  margin-left: 0;
+}
+
+.member-img {
+  border-radius: 50%;
+  width: 3.5rem;
+  object-fit: cover;
+}
+
+.carousel .member {
+  display: flex;
+  gap: 1em;
+}
+
+.carousel-nav {
+
+  display: flex;
+  justify-content: center;
+  padding: .4em 0;
+}
+
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: .8rem;
+  height: .8rem;
+  background: rgba(0, 0, 0, .3);
+  margin: 0 .3em;
+}
+
+.carousel-indicator.current-slide {
+  background: rgba(0, 0, 0, .75);
 }
