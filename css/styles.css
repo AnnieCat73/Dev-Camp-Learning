@@ -142,6 +142,12 @@ span {
 .section-title {
   color: var(--clr-secondary-800);
   font-weight: 700;
+  font-size: ;
+}
+
+.section-title-light {
+  font-weight: var(--fs-700);
+  font-size: ;
 }
 
 .text-black {
@@ -398,4 +404,40 @@ section {
 
 .is-hidden {
   display: none;
+}
+
+/* featured-in */
+
+
+
+/* plans */
+
+.plans-container {
+  background-color: var(--clr-secondary-800);
+}
+
+.plans-header {
+  color: var(--clr-primary-100);
+}
+
+.plans .plan {
+  background-color: var(--clr-primary-100);
+  box-shadow: var(--box-shadow);
+  
+}
+
+.plans .heading-text {
+  font-size: ;
+}
+
+.plans .cost {
+  color: var(--clr-secondary-800);
+  font-size: ;
+  font-weight: ;
+}
+
+.plans .plans-span {
+  color: var(--clr-neutral-800);
+  font-size: ;
+  font-weight: ;
 }
