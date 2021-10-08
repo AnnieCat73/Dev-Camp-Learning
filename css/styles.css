@@ -25,7 +25,9 @@
   --clr-neutral-600: #848695;/*Flex/Exp tick boxes*/
   --clr-neutral-800: #555555;/*sign in btn/membship Easily..flexibl headimgs etc/test heading name + plan member txt*/
 
+  --clr-bg-200:  #f1f1f1;
   --clr-bg-300: #e2f6eb;/*bg header/hero/membership*/
+  
 
   --clr-accent-600: #3dc37a; /*for green btns*/
   --clr-accent-700: #edc846;/*for yellow text*/
@@ -130,6 +132,10 @@ body {
 
 
 /***** Typography *********/
+
+a {
+  text-decoration: none;
+}
 
 span {
   color: var(--clr-accent-700);
@@ -441,3 +447,42 @@ section {
   font-size: ;
   font-weight: ;
 }
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+  background-color: var(--clr-bg-200);
+}
+
+.footer .footer-content {
+ color: var(--clr-neutral-600);/*for p in footer-content*/
+ font-size: ;
+ font-weight: ;
+}
+
+.footer .footer-title {
+  color: var(--clr-secondary-800);
+  font-size: ;
+}
+
+.footer .footer-nav {
+
+}
+
+.footer .footer-nav-list {
+  text-decoration: none;
+}
+
+.footer .footer-nav-title {
+  color: var(--clr-secondary-800);
+  font-size: ;
+  font-weight: var(--fw-700);
+  
+}
+
+
