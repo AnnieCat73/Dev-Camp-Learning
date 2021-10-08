@@ -240,6 +240,81 @@ section {
 
 /* header */
 
+.header .primary-nav {
+  display: none;
+}
+
+.primary-header .large-screen {
+  display: none;
+}
+
+.current {
+  border-bottom: 1px solid var(--clr-secondary-800);
+}
+
+/* hamburger */
+
+.header .open-nav {
+  border: 0;
+  background: 0;
+  color: var(--clr-secondary-800);
+  cursor: pointer;
+  padding: .5em;
+  margin-left: auto;/*not sure if need this*/
+  font-size: 1.5em;
+}
+
+.menu-nav {
+  position: fixed;
+  background: var(--clr-bg-300);
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  transform: translateX(0);
+  transition: transform 250ms;
+  height: 100%;
+ 
+}
+
+.navigation-open {
+  transform: translateX(-100%)
+}
+
+.nav-link {
+  color: var(--clr-neutral-800);
+  font-size: ;
+  font-weight: ;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--clr-neutral-800);
+  font-weight: 700;
+}
+
+.header .menu-list {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header .close-nav {
+  border: 0;
+  background: 0;
+  color: var(--clr-secondary-800);
+  font-weight: 700;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: .5em;
+  /*position: absolute;*/
+}
+
 
 /* hero */
 

@@ -1,3 +1,23 @@
+//Mobile Header Menu
+
+//Get elements
+const closeBtn = document.querySelector(".close-nav");
+const openBtn = document.querySelector(".open-nav");
+const navMenu = document.querySelector(".menu-nav");
+
+//attach eventlisteners and toggle navigation-open class
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("navigation-open");
+});
+
+openBtn.addEventListener("click", () => {
+  navMenu.classList.add("navigation-open");
+});
+
+
+
+
+
 // Testimonials Carousel
 
 
@@ -163,3 +183,14 @@ dotsNav.addEventListener("click", e => {
   hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
 });
+
+
+
+
+
+
+
+
+
+
+

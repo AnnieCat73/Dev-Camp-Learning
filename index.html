@@ -20,14 +20,30 @@
         <a href="#"><img src="" alt="" class="logo"></a>
         <nav class="primary-nav">
           <ul class="primary-nav-list">
-            <li><a href="index.html" class="nav-item current">Homepage</a></li>
-            <li><a href="index.html" class="nav-item current">Class</a></li>
-            <li><a href="index.html" class="nav-item current">Resources</a></li>
-            <li><a href="index.html" class="nav-item current">Community</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link current">Homepage</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link current">Classes</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link current">Resources</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link current">Community</a></li>
           </ul>
         </nav>
       </div>
-      <a href="#" class="btn btn-light">Sign In</a>
+      <a href="#" class="btn btn-light large-screen">Sign In</a>
+
+      <!--Hamburger for mobile-->
+      <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+      <!--open hamb btn-->
+      <nav class="menu-nav">
+        <button aria-label="Close navigation" class="close-nav">&times;</button>
+        <!--close btn inside hamb menu-->
+        <ul class="menu-list">
+          <li class="nav-item"><a href="#" class="nav-link current">Homepage</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Resourses</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+          <li><a href="#" class="btn btn-light">Sign-in</a></li>
+        </ul>
+      </nav>
+      <!--end Hamburger for mobile-->
     </div>
   </header>
 
