@@ -19,6 +19,7 @@
   --clr-primary-100: #ffffff;/*all the white stuff*/
   --clr-secondary-800: #0f0a33;/*dark blue bg, heading + pricing all text*/
 
+  --clr-neutral-200: #fdf2e9;
   --clr-neutral-300: #bcbac4; /*greyish text on most <p>texts*/
   --clr-neutral-400: #707d76;/* text color on flexibel/exper in hero*/
   --clr-neutral-500: #6b687b; /*name of course creator text*/
@@ -41,6 +42,9 @@
   --br-100: 1rem;
 
   --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+  --box-shadow-200: 0 2.4rem 4.8rem rgba(5, 2, 2, 0.15);
+  --box-shadow-300: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-400: 0 0 0 0.15rem #3dc37a;
 }
 
 
@@ -181,6 +185,8 @@ span {
 }
 
 /***** Utility Classes *****/
+
+
 
 .bg-light {
   background-color: var(--clr-primary-100);
@@ -523,9 +529,127 @@ section {
   font-weight: ;
 }
 
+/* Join */
+
+
+.join-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--clr-bg-300);
+  box-shadow: var(--box-shadow-200);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, var(--clr-accent-600), var(--clr-bg-300));
+  overflow: hidden;
+}
+
+.join-heading {
+  margin-bottom: 1em;
+}
+/*****/
 
 
 
+.join-content {
+ 
+ padding: 3rem; 
+}
+
+.join-text {
+  margin-top: 1em;
+}
+/*////desktop for now*/
+@media (min-width: 30em) {
+
+  .join-grid {/*NOT WORKING RIGHT NOW/MIGHT DO WHEN SET UP RESP*/
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .join-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/***/
+
+.join-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  gap: 1em 1.5em;
+}
+
+.join-form {
+  
+}
+
+.join-form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .6em;
+}
+
+.join-form input,
+.join-form select {
+  width: 100%;
+  padding: .3em .5em;
+  font-size: 1rem;
+  color: inherit;
+  border: none;
+  background-color: var(--clr-neutral-200);
+  border-radius: 9px;
+  box-shadow: var(--box-shadow-300);
+}
+
+.join-form input::placeholder {
+  color: var(--clr-neutral-400);
+}
+
+
+.join-form button {
+  display: inline-block;
+  align-self: end;
+  text-decoration: none;
+  color: var(--clr-secondary-800);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .3em 1em;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: var(--clr-primary-100);
+  transition: all 0.3s;
+  box-shadow: var(--box-shadow-300);
+}
+
+.join-form button:hover,
+.join-form button:focus {
+  background-color: var(--clr-neutral-300);
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-700);
+}
+
+.join-img-box {
+  /*background:linear-gradient(to right bottom, var(--clr-accent-600), var(--clr-bg-300)),
+   url("../img/form.jpg");
+  background-size: cover;
+  background-position: center;*/
+  
+  
+}
+
+.join-img {
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+}
+
+.join-form *:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-400);
+  
+}
 
 
 /* Footer */
