@@ -258,6 +258,11 @@ section {
   border-bottom: 1px solid var(--clr-secondary-800);
 }
 
+.logo {
+  width: 6rem;
+  height: 6rem;
+}
+
 /* hamburger */
 
 .header .open-nav {
