@@ -1,15 +1,24 @@
 :root {
   --spacer: 1rem;
-  --ff-sans: font-family: "Rubik", sans-serif;;
+  /*--ff-sans: font-family: "Rubik", sans-serif;*/
 
   /* small screen font-sizes */
 
-  --fs-300: 1.125rem; /*18pp*/
-  --fs-400: 1.5rem; /*24px*/
-  --fs-500: 1.75rem; /*18px*/
-  --fs-600: 1.25rem; /*20px*/
-  --fs-700: 1.313rem; /*21px*/
-  --fs-900: 2.25rem; /*36px*/
+  --fs-100: 1rem;
+  --fs-200: 1.2rem;/*12px*/
+  --fs-400: 1.4rem; /*14px*/
+  --fs-600: 1.6rem; /*16px*/
+  --fs-800: 1.8rem; /*18px*/
+  --fs-110: 2rem; /*20px*/
+  --fs-112: 2.2rem; /*22px*/
+  --fs-114: 2.4rem; /*24px*/
+  --fs-116: 2.6rem; /*26px*/
+  --fs-118: 2.8rem; /*28px*/
+  --fs-120: 3rem; /*30px*/
+  --fs-122: 3.2rem; /*32px*/
+  --fs-124: 3.4rem; /*34px*/
+  --fs-126: 3.4rem; /*36px*/
+  --fs-128: 3.6rem; /*38px*/
 
   --fw-400: 400;
   --fw-500: 500;
@@ -17,6 +26,7 @@
   --fw-700: 700;
 
   --clr-primary-100: #ffffff;/*all the white stuff*/
+  --clr-secondary-700: #0e1111;
   --clr-secondary-800: #0f0a33;/*dark blue bg, heading + pricing all text*/
 
   --clr-neutral-200: #fdf2e9;
@@ -128,9 +138,20 @@ img {
   display: block;
 }
 
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
 body {
-  line-height: 1.6;
-  font-family: var(--ff-sans);
+  font-family: "Rubik", sans-serif;
+  
+  color: var(--clr-secondary-700);
+  line-height: 1;
+  font-weight: 400;
+  
 }
 
 
@@ -144,20 +165,30 @@ a {
 span {
   color: var(--clr-accent-700);
 }
+
 .heading {
   color: var(--clr-secondary-800);
-  font-weight: 700;
+  font-weight: var(--fw-700);
+  font-size: var(--fs-128);
+  text-align: center;
 }
 
 .section-title {
   color: var(--clr-secondary-800);
-  font-weight: 700;
-  font-size: ;
+  font-weight: var(--fw-700);
+  font-size: var(--fs-800);
 }
 
 .section-title-light {
   font-weight: var(--fs-700);
   font-size: ;
+}
+
+.text {
+  
+  font-size: var(--fs-600);
+  text-align: center;
+  line-height: 1.5;
 }
 
 .text-black {
@@ -201,10 +232,10 @@ span {
 .btn {
   display: inline-block;
   text-decoration: none;
-  padding: 0.6em 2em;
+  padding: 0.9em 2em;
   border-radius: 1.8em;
   font-weight: 700;
-  font-size: ;
+  font-size: var(--fs-600);
 }
 
 .btn-accent {
@@ -224,7 +255,7 @@ span {
 .container {
   max-width: 50rem;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 0 2em;
 }
 
 section {
@@ -234,6 +265,12 @@ section {
 
 .flow-content {
 
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -246,7 +283,18 @@ section {
 
 /* header */
 
-.header .primary-nav {
+.header {
+  background-color: var(--clr-bg-300);
+  padding-bottom: 2rem;
+}
+
+.primary-header {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2em 2.2em;
+}
+
+.primary-nav {
   display: none;
 }
 
@@ -259,20 +307,22 @@ section {
 }
 
 .logo {
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
 }
 
 /* hamburger */
 
-.header .open-nav {
+.open-nav {
   border: 0;
   background: 0;
   color: var(--clr-secondary-800);
   cursor: pointer;
   padding: .5em;
   margin-left: auto;/*not sure if need this*/
-  font-size: 1.5em;
+  font-size: 3em;
+  align-self: flex-start;
+  margin-bottom: auto;
 }
 
 .menu-nav {
@@ -298,13 +348,14 @@ section {
   font-size: ;
   font-weight: ;
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--clr-neutral-800);
   font-weight: 700;
 }
 
-.header .menu-list {
+.menu-list {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -315,7 +366,7 @@ section {
 }
 
 
-.header .close-nav {
+.close-nav {
   border: 0;
   background: 0;
   color: var(--clr-secondary-800);
@@ -329,10 +380,104 @@ section {
 
 /* hero */
 
+.hero {
+  background-color: var(--clr-bg-300);
+}
+
+.main-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.hero-img-container {
+  flex-basis: 100%;
+
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  gap: 3.5em 0;
+}
+
+.hero-img {
+  /*clip-path: polygon(10% 15%, 100% 0%, 100% 50%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);*/
+  /*width: 20rem;
+  height: 30rem;*/
+  
+  min-width: 0;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+}
+
+.check-items {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+}
+
+.check-item {
+  display: flex;
+  gap: 1em;
+}
+
+.check-item i {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-600);
+}
+
+.check-item p {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-600);
+}
+
+.offer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.offer-item {
+  background-color: var(--clr-secondary-800);
+  padding: 3.5rem;
+  flex-basis: 100%;
+  text-align: center;
+  border-radius: var(--br-100);
+  
+}
+
+.offer i {
+  color: var(--clr-primary-100);
+  background-color: var(--clr-accent-600);
+  font-size: var(--fs-600);
+  padding: 1em;
+  border-radius: 50%;
+  margin-bottom: .5em;
+  
+  display: inline-block;
+  
+}
+
+.offer p {
+  font-size: var(--fs-600);
+  text-align: center;
+  padding-top: .5em;
+}
+
+
 
 
 
 /* courses */
+
 
 
 .course-gallery {
@@ -520,23 +665,23 @@ section {
   color: var(--clr-primary-100);
 }
 
-.plans .plan {
+.plan {
   background-color: var(--clr-primary-100);
   box-shadow: var(--box-shadow);
   
 }
 
-.plans .heading-text {
+.heading-text {
   font-size: ;
 }
 
-.plans .cost {
+.cost {
   color: var(--clr-secondary-800);
   font-size: ;
   font-weight: ;
 }
 
-.plans .plans-span {
+.plans-span {
   color: var(--clr-neutral-800);
   font-size: ;
   font-weight: ;
@@ -591,9 +736,7 @@ section {
   gap: 1em 1.5em;
 }
 
-.join-form {
-  
-}
+
 
 .join-form label {
   display: block;
@@ -671,26 +814,26 @@ section {
   background-color: var(--clr-bg-200);
 }
 
-.footer .footer-content {
+.footer-content {
  color: var(--clr-neutral-600);/*for p in footer-content*/
  font-size: ;
  font-weight: ;
 }
 
-.footer .footer-title {
+.footer-title {
   color: var(--clr-secondary-800);
   font-size: ;
 }
 
-.footer .footer-nav {
+.footer-nav {
 
 }
 
-.footer .footer-nav-list {
+.footer-nav-list {
   text-decoration: none;
 }
 
-.footer .footer-nav-title {
+.footer-nav-title {
   color: var(--clr-secondary-800);
   font-size: ;
   font-weight: var(--fw-700);
