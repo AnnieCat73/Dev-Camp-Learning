@@ -500,7 +500,15 @@ section {
 
 /* featured-in */
 
+.features {
+  display: flex;
+  justify-content: space-between;
+}
 
+.featured-img {
+  width:5rem;
+  height: 3rem;
+}
 
 /* plans */
 
