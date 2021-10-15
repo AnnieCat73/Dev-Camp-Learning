@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /****hero img****/
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .hero-img-container1 {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-rows: 1fr;
+
+    }
+
+    .hero-item-1 {
+      grid-column: 2 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    .hero-item-2 {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+    }
+
+    .hero-item-3 {}
+  </style>
+</head>
+
+<body>
+
+  <div class="hero-img-container1">
+    <div class="mosaic">
+      <div class="hero-item-1">
+        <img src="img/hero-img.png" alt="Girl with a study guide" class="hero-img">
+      </div>
+      <div class="hero-item-2">
+        <img src="img/hero/pencils.hero.jpg" alt="Girl with a study guide" class="hero-img">
+      </div>
+      <!--<div class="hero-item-3">
+        <img src="img/hero/laptop-hero.jpg" alt="Girl with a study guide" class="hero-img">
+      </div>-->
+    </div>
+
+
+  </div>
+
+
+</body>
+
+</html>

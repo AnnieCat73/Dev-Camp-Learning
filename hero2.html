@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 0 2rem;
+      box-shadow: 3px 2px 12px rgb(0, 0, 0, 40%);
+    }
+
+    .overlapping ul {
+
+      max-width: 50rem;
+      display: grid;
+      grid-template-columns: 2fr 2fr 4fr 3fr;
+
+
+    }
+
+    .overlapping li:nth-child(1) {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+      z-index: 1;
+    }
+
+    .overlapping li:nth-child(2) {
+      grid-column: 2 / span 2;
+      grid-row: 1 / span 3;
+
+
+    }
+
+    .overlapping li:nth-child(3) {
+      grid-row: 3 / span 3;
+      grid-column: 3 /span 2;
+    }
+
+    .hero-img-1 {
+      border-radius: 5px 40px 40px 5px;
+      box-shadow: 10px 10px 5px #ccc;
+    }
+
+    .hero-img-2 {
+      border-radius: 5px;
+      box-shadow: 10px 10px 5px #ccc;
+    }
+
+    .hero-img-3 {
+      border-radius: 40px 5px 5px 5px;
+      box-shadow: 10px 10px 5px #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlapping">
+    <ul class="hero-img-container">
+      <li><img src="img/hero/learn-hero.jpg" alt="" class="hero-img-1"></li>
+      <li><img src="img/hero/hero-img.jpg" alt="" class="hero-img-2"></li>
+      <li><img src="img/hero/laptop-hero.jpg" alt="" class="hero-img-3"></li>
+
+    </ul>
+  </div>
+
+
+
+</body>
+
+</html>
