@@ -1,0 +1,402 @@
+:root {
+  --spacer: 1rem;
+  /*--ff-sans: font-family: "Rubik", sans-serif;*/
+
+  /* small screen font-sizes */
+
+  --fs-100: 1rem;
+  --fs-200: 1.2rem;/*12px*/
+  --fs-300: 1.3rem;
+  --fs-400: 1.4rem; /*14px*/
+  --fs-500: 1.5rem;
+  --fs-600: 1.6rem; /*16px*/
+  --fs-700: 1.7rem;
+  --fs-800: 1.8rem; /*18px*/
+  --fs-900: 1.9rem;
+  --fs-110: 2rem; /*20px*/
+  --fs-111: 2.1rem;
+  --fs-112: 2.2rem; /*22px*/
+  --fs-114: 2.4rem; /*24px*/
+  --fs-116: 2.6rem; /*26px*/
+  --fs-118: 2.8rem; /*28px*/
+  --fs-120: 3rem; /*30px*/
+  --fs-122: 3.2rem; /*32px*/
+  --fs-124: 3.4rem; /*34px*/
+  --fs-126: 3.6rem; /*36px*/
+  --fs-128: 3.8rem; /*38px*/
+  --fs-130: 4rem;
+  --fs-132: 4.2rem;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --clr-primary-100: #ffffff;/*all the white stuff*/
+  --clr-secondary-700: #0e1111;
+  --clr-secondary-800: #0f0a33;/*dark blue bg, heading + pricing all text*/
+
+  --clr-neutral-200: #fdf2e9;
+  --clr-neutral-300: #bcbac4; /*greyish text on most <p>texts*/
+  --clr-neutral-400: #707d76;/* text color on flexibel/exper in hero*/
+  --clr-neutral-500: #6b687b; /*name of course creator text*/
+  --clr-neutral-600: #848695;/*Flex/Exp tick boxes*/
+  --clr-neutral-800: #555555;/*sign in btn/membship Easily..flexibl headimgs etc/test heading name + plan member txt*/
+
+  --clr-bg-200:  #f1f1f1;
+  --clr-bg-300: #e2f6eb;/*bg header/hero/membership*/
+  
+
+  --clr-accent-600: #3dc37a; /*for green btns*/
+  --clr-accent-700: #edc846;/*for yellow text*/
+  --clr-accent-800: #DA4A2B;
+
+
+ 
+
+
+  
+
+  --br-100: 1rem;
+
+  --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+  --box-shadow-200: 0 2.4rem 4.8rem rgba(5, 2, 2, 0.15);
+  --box-shadow-300: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-400: 0 0 0 0.15rem #3dc37a;
+  --box-shadow-500: 10px 10px 5px #ccc;
+
+  /*Zells here*/
+
+  --color-default-state: grey;
+  --color-hover-state: rgb(107, 107, 195);
+  --color-selected-state: rgb(17, 26, 101);
+}
+
+
+
+
+
+
+/******* Reset ********/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd,
+i,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+svg,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+/***tablets 700ish px****/
+
+@media (min-width: 40em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+}
+
+/*** landscape tablets 944px***/
+@media (min-width: 59em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  
+
+}
+
+
+/***Smaller Desktops 1200px*/
+@media (min-width: 75em) {
+  html {
+    /* 10px / 16px */ 
+    font-size: 62.25%;
+  }
+}
+
+
+/**** (large) Desktop 1344px*/
+@media (min-width: 84em) {
+  html {
+    /* 11px / 16px */ 
+    font-size: 68.75%;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  
+  color: var(--clr-secondary-700);
+  line-height: 1;
+  font-weight: 400;
+  
+}
+
+
+/********************ZELLS RESETS *********************/
+/* Some defaults for one-liner buttons FOR HIS BUTTONS NBBBBBBBBBBBB*/
+button {
+  padding: 0.75em 1em;
+  border-radius: 0;
+  line-height: 1;
+  background-color: transparent;
+}
+
+button * {
+  pointer-events: none;
+}
+
+
+
+
+
+/*******************
+ The hidden attribute
+ *******************/
+[hidden] {
+  display: none !important;
+}
+
+/*******************
+ Noscript
+ *******************/
+ 
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+[tabindex="-1"] {
+  outline: none !important;
+}
+
+
+/*
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+/******************************************************/
+
+
+/***** Typography *********/
+
+
+
+.text-black {
+  color: var(--clr-secondary-800);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-400);
+}
+
+
+/******************/
+
+.carousel-slide .member {
+  display: flex;
+}
+
+.carousel .member-details {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.carousel blockquote {
+  font-size: var(--fs-400);
+  margin-left: 0;
+  line-height: 1.3;
+}
+
+.member-img {
+  border-radius: 50%;
+  width: 5rem;
+  object-fit: cover;
+}
+
+.carousel .member {
+  display: flex;
+  gap: 1em;
+}
+
+.carousel .name {
+  font-size: var(--fs-600);
+  margin-bottom: .3em;
+}
+
+
+/***ABOVE HERE FROM OWN STYLE SHEET ***/
+
+
+
+
+
+
+
+
+
+
+
+/* ZELL DOWN FROM HERE - TINKER WITH THIS*/
+
+.carousel {
+  display: grid;
+  grid-template-columns: 3em 80vw 3em;/*use 80vh for respo*/
+  grid-template-rows: 70vh 3em;
+  align-items: center;
+  grid-gap: 1em;
+}
+
+.carousel > *:nth-child(2) {
+  grid-column: 2;
+  align-self: stretch;
+}
+
+
+
+
+.carousel-contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.carousel-contents-container {
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.carousel-slide > a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.carousel-slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* TO MAKE IT RESPONSIVE MUST REMOVE THIS IN STEP 11
+AND POSITION SLIDES WITH JS */
+/*.carousel-slide:nth-child(2) {
+  left: 800px;
+}
+
+.carousel-slide:nth-child(3) {
+  left: 1600px;
+}*/
+
+/**
+ * Buttons
+ */
+ .carousel-button {
+  padding: 0.25em;
+  border: none;
+}
+.carousel-button svg {
+  fill: var(--color-default-state);
+}
+
+.carousel-button:hover svg,
+.carousel-button:active svg {
+  fill: var(--color-hover-state);
+}
+
+.carousel-button.is-hidden {
+  display: none;
+}
+
+
+/**
+ * Dots
+ */
+ .carousel-dots {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.carousel-dot {
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  border-radius: 100%;
+  background-color: var(--color-default-state);
+}
+
+.carousel-dot + .carousel-dot {
+  margin-left: 1em;
+}
+
+.carousel-dot:hover {
+  background-color: var(--color-hover-state);
+}
+
+.carousel-dot.is-selected {
+  background-color: var(--color-selected-state);
+}
+
+.is-hidden {
+  display: none;
+}

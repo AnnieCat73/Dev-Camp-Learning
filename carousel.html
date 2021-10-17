@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Try</title>
+  <link rel="stylesheet" href="css/carousel.css">
+</head>
+<div class="carousel">
+  <button class="carousel-button previous-button" hidden>
+    <svg id="left" viewBox="0 0 54 69.007">
+      <path d="M47 0L3.44 34.502 47 69.007z" />
+    </svg>
+  </button>
+
+  <div class="carousel-contents-container">
+    <ul class="carousel-contents">
+
+      <li class="carousel-slide is-selected">
+        <div class="member">
+          <img src="img/students/hannah.jpg" alt="Hannah" class="member-img">
+          <div class="member-details">
+            <h4 class="name">Hannah Hitchins</h4>
+            <p class="text-black">Basic Plan Member</p>
+          </div>
+        </div>
+        <blockquote>"I think Dev Learning Camp is very good, with experienced mentors making
+          me understand the courses I take here"
+        </blockquote>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="member">
+          <img src="img/students/ben.jpg" alt="Ben" class="member-img">
+          <div class="member-details">
+            <h4 class="name"> Ben Salomon</h4>
+            <p class="text-black">Basic Plan Member</p>
+          </div>
+        </div>
+        <blockquote>"I think Dev Learning Camp is very good, with experienced mentors making
+          me understand the courses I take here"
+        </blockquote>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="member">
+          <img src="img/students/dave.jpg" alt="Dave" class="member-img">
+          <div class="member-details">
+            <h4 class="name">Dave Piltcher</h4>
+            <p class="text-black">Basic Plan Member</p>
+          </div>
+        </div>
+        <blockquote>"I think Dev Learning Camp is very good, with experienced mentors making
+          me understand the courses I take here"
+        </blockquote>
+      </li>
+
+    </ul>
+  </div>
+
+
+
+  <button class="carousel-button next-button">
+    <svg viewBox="0 0 54 69.007">
+      <path d="M5-.121l43.56 34.502L5 68.886z" />
+    </svg>
+  </button>
+
+  <div class="carousel-dots">
+    <button class="carousel-dot is-selected"></button>
+    <button class="carousel-dot"></button>
+    <button class="carousel-dot"></button>
+  </div>
+</div>
+
+<body>
+  <script src="js/carousel.js"></script>
+</body>
+
+</html>

@@ -391,7 +391,7 @@ section {
   transform: translateX(0);
   transition: transform 250ms;
   height: 100%;
- 
+  z-index: 3;
 }
 
 .navigation-open {
@@ -788,7 +788,21 @@ section {
 }
 
 
+.courses-heading {
+  position: relative;
+}
 
+.courses-heading::before {
+  content: "";
+  position: absolute;
+  width: 3.5em;
+  height: 3.5em;
+  background: var(--clr-accent-700);
+  border-radius: 50%;
+  z-index: -1;
+  top: 2px;
+  left: -15px;
+}
 
 
 .courses .btn-light {
@@ -986,7 +1000,10 @@ section {
 
 .testimonial-heading {
   text-align: center;
+  
 }
+
+
 
 .carousel {
   
@@ -1124,6 +1141,19 @@ section {
 
   .testimonial-heading {
     flex-basis: 48%;
+    position: relative;
+  }
+
+  .testimonial-heading::before {
+    content: "";
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    background: var(--clr-accent-600);
+    border-radius: 50%;
+    z-index: -1;
+    top: -10px;
+    left: 0px;
   }
 
   .testimonial-heading .section-title {
