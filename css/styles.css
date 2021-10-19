@@ -1414,6 +1414,8 @@ section {
 /* Join */
 
 
+
+
 .join-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1511,14 +1513,7 @@ section {
   font-weight: var(--fw-700);
 }
 
-.join-img-box {
-  /*background:linear-gradient(to right bottom, var(--clr-accent-600), var(--clr-bg-300)),
-   url("../img/form.jpg");
-  background-size: cover;
-  background-position: center;*/
-  
-  
-}
+
 
 .join-img {
   object-fit: cover;
@@ -1532,6 +1527,48 @@ section {
   box-shadow: var(--box-shadow-400);
   
 }
+
+/**************************ME JOIN NEW*****/
+
+.msg-container {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.icons i {
+  font-size: var(--fs-400);
+  overflow: hidden;
+}
+
+.icons small {
+  font-size: var(--fs-400);
+}
+
+.valid-name {
+  
+  color: var(--clr-accent-600);
+  display: none;
+}
+
+.error-name {
+  color: var(--clr-accent-800);
+  display: none;
+}
+
+.valid-email {
+  color: var(--clr-accent-600);
+  display: none;
+}
+
+.error-email {
+  color: var(--clr-accent-800);
+  display: none;
+}
+
+
+/**********************************/
+
 
 /***tablets ****/
 

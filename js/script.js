@@ -1,196 +1,196 @@
-//Mobile Header Menu
+//CAROUSEL
+
+//Switching slides so when user clicks a button the carousel should move to
+//next or previous slide
 
 //Get elements
-const closeBtn = document.querySelector(".close-nav");
-const openBtn = document.querySelector(".open-nav");
-const navMenu = document.querySelector(".menu-nav");
+const carousel = document.querySelector(".carousel");
+const previousButton = carousel.querySelector(".previous-button");
+const nextButton = carousel.querySelector(".next-button");
 
-//attach eventlisteners and toggle navigation-open class
-closeBtn.addEventListener("click", () => {
-  navMenu.classList.remove("navigation-open");
-});
+//When click on next button we want to show the next slide
+const contents = carousel.querySelector(".carousel-contents");
+const dotsContainer = carousel.querySelector(".carousel-dots");
 
-openBtn.addEventListener("click", () => {
-  navMenu.classList.add("navigation-open");
-});
-
-
-
-
-
-// Testimonials Carousel
-
-
-//What we need to get for carousel to work
-const track = document.querySelector(".carousel-track");
-const slides = Array.from(track.children);// so get li from track ul above
-//they been converted to a single variable within an array//instead of doing each slide
-const nextButton = document.querySelector(".button-right");
-const prevButton = document.querySelector(".button-left");
-const dotsNav = document.querySelector(".carousel-nav");//just the nav
-const dots = Array.from(dotsNav.children);//the carousel indicators as above
-
-
-//the slide is different size in variour resp modes so need to get a slide's size
-const slideSize = slides[0].getBoundingClientRect();//to see it but we need it's width
-//const slideWidth = slideSize.width;//or better
-const slideWidth = slides[0].getBoundingClientRect().width;//332
-//console.log(slideWidth);//332
-
-
-//arrange the slides next to one another as now they are stacking on top of each other
-/*slides[0].style.left = slideWidth * 0 + "px";//refactored from: slides[0].style.left = 0;//first slide
-slides[1].style.left = slideWidth * 1 + "px";//refactored from: slides[1].style.left = slideWidth + "px";//second slide moved to the right of it's width
-slides[2].style.left = slideWidth * 2 + "px";//3rd slide
-//Instead better to do a loop as might add other slides later
-slides.forEach((slide, index) => {
-  slide.style.left = slideWidth * index + "px";//so times it index so slide 1 * 0, 1* 1 and 2 *
-});*/
-
-//then refactor it to this as better understand what's going on then
-const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + "px";
-}
-slides.forEach(setSlidePosition);
-
-
-
-
-//When I click right, move slides to the right
-
-/*nextButton.addEventListener("click", e => {
-  //find the current slide you are on first
-  const currentSlide = track.querySelector(".current-slide");//only look in track to find .current-slide
-  //console.log(currentSlide);
-  //find next slide
-  const nextSlide = currentSlide.nextElementSibling;//need to click on > to see it
-  //console.log(nextSlide)
-
-  //move to next slide
-  const amountToMove = nextSlide.style.left;//find out how much we are going to be moving to
-  //console.log(amountToMove);//500px is amount we are going to move by
-  //then move whole track
-  track.style.transform = 'translateX(-' + amountToMove + ')';
-  currentSlide.classList.remove("current-slide");//so can move from one to the other
-  nextSlide.classList.add("current-slide");//not juse from 1st slide to 2nd
-});*/
-
-
-//ALL FUNCTIONS TOGETHER
-
-//The above Move left and right/too much code so shorten it by using a function
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-  currentSlide.classList.remove("current-slide");
-  targetSlide.classList.add("current-slide");
-};
-
-//refactored code from moving dot to match slide as from below
-const updateDots = (currentDot, targetDot) => {
-  currentDot.classList.remove("current-slide");
-  targetDot.classList.add("current-slide");
-}
-
-const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-  //left/right buttons disappear when end of slide sequence
-  if (targetIndex === 0) {//so at first slide
-    prevButton.classList.add("is-hidden");
-    nextButton.classList.remove("is-hidden");
-  } else if (targetIndex === slides.length - 1) {//if we are on last slide
-    prevButton.classList.remove("is-hidden");
-    nextButton.classList.add("is-hidden");
-  } else {
-    prevButton.classList.remove("is-hidden");
-    nextButton.classList.remove("is-hidden");
-  }
-}
-
-
-//When I click left, move slides to the left
-prevButton.addEventListener("click", e => {
-  const currentSlide = track.querySelector(".current-slide");
-  const prevSlide = currentSlide.previousElementSibling;
-
-  //so when click on < get the corresponding dot
-  const currentDot = dotsNav.querySelector(".current-slide");
-  const prevDot = currentDot.previousElementSibling;
-  const prevIndex = slides.findIndex(slide => slide === prevSlide);
-
-  moveToSlide(track, currentSlide, prevSlide);
-  updateDots(currentDot, prevDot);
-  hideShowArrows(slides, prevButton, nextButton, prevIndex);
-});
-
-
-//when I click right, move slides to the right
-nextButton.addEventListener("click", e => {
-  const currentSlide = track.querySelector(".current-slide");
+nextButton.addEventListener("click", event => {
+  //find currentSlide
+  const currentSlide = contents.querySelector(".is-selected");
+  //get to next slide
   const nextSlide = currentSlide.nextElementSibling;
+  //get values of the next slide(s)
+  const destination = getComputedStyle(nextSlide).left;
+  //use destination value to set .carousel-content
+  contents.style.left = "-" + destination;
+  //update .is-selected class
+  currentSlide.classList.remove("is-selected");
+  nextSlide.classList.add("is-selected");
 
-  //so when click on > get the corresponding dot
-  const currentDot = dotsNav.querySelector(".current-slide");
+  //show previous button when clicking on next button
+  previousButton.removeAttribute("hidden");
+  //hide next button when on last slide
+  if (!nextSlide.nextElementSibling) {
+    nextButton.setAttribute("hidden", true);
+  }
+
+  //updating dots when click on next button
+  const currentDot = dotsContainer.querySelector(".is-selected");
+  //find next dot
   const nextDot = currentDot.nextElementSibling;
+  //remove .is-selected from currentDot
+  currentDot.classList.remove("is-selected");
+  //add .is-selected to nextDot
+  nextDot.classList.add("is-selected");
 
-  const nextIndex = slides.findIndex(slide => slide === nextSlide);
-
-  moveToSlide(track, currentSlide, nextSlide);
-  updateDots(currentDot, nextDot);
-  hideShowArrows(slides, prevButton, nextButton, nextIndex);
 });
 
+//When click on previous button we want to show the previous slide
 
-//When I click the nav indicators, move to that slide
-dotsNav.addEventListener("click", e => {
-  //what indicator is clicked on
-  //const targetDot = e.target;//e is tracking where we click on
-  //console.log(e.target);//just to target what we are clicking on so one dot f.ex
-  //the above becomes:
-  const targetDot = e.target.closest("button");//this means only button(s) and
-  //console.log(targetDot)//and no whte space around
+previousButton.addEventListener("click", event => {
+  //find currentSlide
+  const currentSlide = contents.querySelector(".is-selected");
+  //get to previous slide
+  const previousSlide = currentSlide.previousElementSibling;
+  //get values of the previous slide(s)
+  const destination = getComputedStyle(previousSlide).left;
+  //use destination value to set .carousel-content
+  contents.style.left = "-" + destination;
+  //update .is-selected class
+  currentSlide.classList.remove("is-selected");
+  previousSlide.classList.add("is-selected");
+
+  //show next button when clicking on previous button
+  nextButton.removeAttribute("hidden");
+  //hide previous button when on first slide
+  if (!previousSlide.previousElementSibling) {
+    previousButton.setAttribute("hidden", true);
+  }
+
+  //updating dots when click on previous button
+  const currentDot = dotsContainer.querySelector(".is-selected");
+  //find previous dot
+  const previousDot = currentDot.previousElementSibling;
+  //remove .is-selected from currentDot
+  currentDot.classList.remove("is-selected");
+  //add .is-selected to previousDot
+  previousDot.classList.add("is-selected");
+
+});
+
+//WORKING THE DOTS
+
+//get elements
+const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
 
 
-  if (!targetDot) return;
 
-  const currentSlide = track.querySelector(".current-slide");
-  const currentDot = dotsNav.querySelector(".current-slide");
+//When a dot is clicked we need to find its corresponding slide
+dots.forEach(dot => {
+  dot.addEventListener("click", event => {
+    let clickedDotIndex;
+    for (let index = 0; index < dots.length; index++) {
+      if (dots[index] === dot) {
+        clickedDotIndex = index;
+      }
+    }
+    //use clidkedDotIndex to find slide to show
+    const slideToShow = slides[clickedDotIndex];
+    const destination = getComputedStyle(slideToShow).left;
+    contents.style.left = "-" + destination;
 
-  //which dot are you on i.e its index
-  const targetIndex = dots.findIndex(dot => dot === targetDot);//so returning the index no of the dot you click on
-  //console.log(targetIndex);so click on first dot get 0 etc
-  const targetSlide = slides[targetIndex];
+    //update location of .is-selected
+    slides.forEach(slide => {
+      slide.classList.remove("is-selected");
+    })
+    //then add .is-selected to newly displayed slide
+    slideToShow.classList.add("is-selected");
 
-  moveToSlide(track, currentSlide, targetSlide);//so when click on a dot it's going to 
-  //find the whole track and move to the slide the dot you are clicking on
+    //update dot state so the selected dot is black
+    dots.forEach(d => {
+      d.classList.remove("is-selected");
+    })
+    dot.classList.add("is-selected");
 
-  /*get the icons moving so when press on a dot get the correct slide
-  currentDot.classList.remove("current-slide");
-  targetDot.classList.add("current-slide"); THIS CODE REFACTORED TO UPDATEDOTS() ABOVe
-  but run it in here*/
-  updateDots(currentDot, targetDot);
+    //Showing/hiding previous and next buttons when click on a dot
+    if (clickedDotIndex === 0) {
+      previousButton.setAttribute("hidden", true);
+      nextButton.removeAttribute("hidden");
+    } else if (clickedDotIndex === dots.length - 1) {
+      previousButton.removeAttribute("hidden");
+      nextButton.setAttribute("hidden", true);
+    } else {
+      previousButton.removeAttribute("hidden");
+      nextButton.removeAttribute("hidden");
+    }
+  });
+})
 
-  /*left/right buttons disappear when end of slide sequence
-  if (targetIndex === 0) {//so at first slide
-    prevButton.classList.add("is-hidden");
-    nextButton.classList.remove("is-hidden");
-  } else if (targetIndex === slides.length - 1) {//if we are on last slide
-    prevButton.classList.remove("is-hidden");
-    nextButton.classList.add("is-hidden");
+//Position the slides with Javascript - forEach loop
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+slides.forEach((slide, index) => {
+  slide.style.left = slideWidth * index + "px";
+})
+
+
+
+//FULL NAME AND EMAIL VALIDATION ON FORM IN JOIN SECTION
+
+//get elements
+const form = document.querySelector(".join-form");
+const fullName = document.getElementById("full-name");
+const emailField = document.getElementById("email");
+const joinButton = document.getElementById("join-button");
+
+const nameMsg = form.querySelector(".name-msg");
+const emailMsg = form.querySelector(".email-msg");
+
+const validEmail = form.querySelector(".valid-email");
+const validName = form.querySelector(".valid-name");
+const formInput = document.querySelector("input");
+const errorEmail = document.querySelector(".error-email");
+const errorName = document.querySelector(".error-name");
+
+
+//add eventlistener
+joinButton.addEventListener("click", function (e) {
+
+  e.preventDefault();
+  const email = emailField.value;
+  const fullNameValue = fullName.value;
+
+  if (fullNameValue === "") {
+    nameMsg.innerHTML = "Full Name cannot be empty";
+    validName.style.display = "none";
+    errorName.style.display = "block";
+
   } else {
-    prevButton.classList.remove("is-hidden");
-    nextButton.classList.remove("is-hidden");
-  } THE FUNCTION CALLED FROM ABOVE CALLED HERE:*/
+    nameMsg.innerHTML = "Valid Full Name";
+    validName.style.display = "block";
+    errorName.style.display = "none";
 
-  hideShowArrows(slides, prevButton, nextButton, targetIndex);
+  }
 
+  if (validateEmail(email)) {
+
+    emailMsg.innerHTML = "Email is valid";
+    validEmail.style.display = "block";
+    errorEmail.style.display = "none";
+  } else {
+    emailMsg.innerHTML = "Email is not valid";
+    errorEmail.style.display = "block";
+    validEmail.style.display = "none";
+  }
 });
 
+const clearInput = function () {
+  formInput.value = "";
+}
 
-
-
-
-
-
-
+function validateEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 
 

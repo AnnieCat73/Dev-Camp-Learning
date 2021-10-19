@@ -508,15 +508,29 @@
             <p class="join-text">Learn to Code with us! Our courses will make you a great web developer!</p>
           </div>
 
-          <form action="#" class="join-form">
+          <form id="form" action="#" class="join-form">
 
             <div>
               <label for="full-name">Full Name</label>
-              <input id="full-name" type="text" placeholder="John Smith" required>
+              <input id="full-name" class="name-input" type="text" placeholder="John Smith" required>
+              <div class="msg-container">
+                <div class="icons">
+                  <i class="fas fa-check-circle valid-name"></i>
+                  <i class="fas fa-exclamation-circle error-name"></i>
+                </div>
+                <small class="name-msg"></small>
+              </div>
             </div>
             <div>
               <label for="email">Email Address</label>
-              <input id="email" type="email" placeholder="me@example.com" required>
+              <input id="email" class="email-input" type="email" placeholder="me@example.com" required>
+              <div class="msg-container">
+                <div class="icons">
+                  <i class="fas fa-check-circle valid-email"></i>
+                  <i class="fas fa-exclamation-circle error-email"></i>
+                </div>
+                <small class="email-msg"></small>
+              </div>
             </div>
 
             <div>
@@ -532,8 +546,11 @@
               </select>
             </div>
 
-            <button>Join Now</button>
+            <button id="join-button">Join Now</button>
           </form>
+
+
+
 
         </div>
 
@@ -584,7 +601,7 @@
 
 
 
-  <script src="js/carousel.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
