@@ -180,14 +180,17 @@ body {
   color: var(--clr-secondary-700);
   line-height: 1;
   font-weight: 400;
+  display: grid;
+  margin-top: 10rem;
+  justify-content: center;
   
 }
 
 
 /********************ZELLS RESETS *********************/
 /* Some defaults for one-liner buttons FOR HIS BUTTONS NBBBBBBBBBBBB*/
-button {
-  padding: 0.75em 1em;
+/*button {
+  padding: 0.75em .5em;
   border-radius: 0;
   line-height: 1;
   background-color: transparent;
@@ -195,7 +198,7 @@ button {
 
 button * {
   pointer-events: none;
-}
+}*/
 
 
 
@@ -232,7 +235,7 @@ body {
 /******************************************************/
 
 
-/***** Typography *********/
+/***** Typography ********* NOT INCLUDE IN CODE AS ALREADY GOT IT*/
 
 
 
@@ -242,8 +245,150 @@ body {
   font-weight: var(--fw-400);
 }
 
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 7rem;
+}
+
+
+.flow-content > * + *{
+  margin-top: 5rem;
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /******************/
+
+
+
+/***ABOVE HERE FROM OWN STYLE SHEET ***/
+
+/* testimonials */
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  justify-content: center;
+}
+
+.testimonial-heading {
+  text-align: center;
+  
+}
+
+/*CAROUSEL NEW */
+
+
+
+
+
+
+
+
+
+
+/* ZELL DOWN FROM HERE - TINKER WITH THIS*/
+
+.carousel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2em 1fr 2em;/*use 80vh for respo*/
+  grid-template-rows: 15rem 3em;
+  align-items: center;
+  grid-gap: 1em;
+  box-shadow: var(--box-shadow-200);
+  border-radius: 10px;
+}
+
+.carousel > *:nth-child(2) {
+  grid-column: 2;
+  align-self: stretch;
+}
+
+
+
+
+.carousel-contents {
+  
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.carousel-contents-container {
+  overflow: hidden;
+}
+
+.carousel-slide {
+  background-color: var(--clr-primary-100);
+  
+  border-radius: 5px;
+  padding: .7em;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+
+
+.carousel-slide img {
+  /*width: inherit;
+  height: inherit;*/
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* TO MAKE IT RESPONSIVE MUST REMOVE THIS IN STEP 11
+AND POSITION SLIDES WITH JS 
+.carousel-slide:nth-child(2) {
+  left: 400px;
+}
+
+.carousel-slide:nth-child(3) {
+  left: 800px;
+}*/
+
+/**
+ * Buttons
+ */
+ .carousel-button {
+  border: none;
+  padding: 0.75em .5em;
+  border-radius: 0;
+  line-height: 1;
+  background-color: transparent;
+}
+.carousel-button svg {
+  fill: var(--color-default-state);
+}
+
+.carousel-button:hover svg,
+.carousel-button:active svg {
+  fill: var(--color-hover-state);
+}
+
+.carousel-button.is-hidden {
+  display: none;
+}
+
+/*************************MY CODE FROM PREVIOUS ****************/
 
 .carousel-slide .member {
   display: flex;
@@ -260,11 +405,12 @@ body {
   line-height: 1.3;
 }
 
+/*
 .member-img {
   border-radius: 50%;
   width: 5rem;
   object-fit: cover;
-}
+}*/
 
 .carousel .member {
   display: flex;
@@ -276,98 +422,7 @@ body {
   margin-bottom: .3em;
 }
 
-
-/***ABOVE HERE FROM OWN STYLE SHEET ***/
-
-
-
-
-
-
-
-
-
-
-
-/* ZELL DOWN FROM HERE - TINKER WITH THIS*/
-
-.carousel {
-  display: grid;
-  grid-template-columns: 3em 80vw 3em;/*use 80vh for respo*/
-  grid-template-rows: 70vh 3em;
-  align-items: center;
-  grid-gap: 1em;
-}
-
-.carousel > *:nth-child(2) {
-  grid-column: 2;
-  align-self: stretch;
-}
-
-
-
-
-.carousel-contents {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-.carousel-contents-container {
-  overflow: hidden;
-}
-
-.carousel-slide {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-}
-
-.carousel-slide > a {
-  display: block;
-  width: inherit;
-  height: inherit;
-}
-
-.carousel-slide img {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* TO MAKE IT RESPONSIVE MUST REMOVE THIS IN STEP 11
-AND POSITION SLIDES WITH JS */
-/*.carousel-slide:nth-child(2) {
-  left: 800px;
-}
-
-.carousel-slide:nth-child(3) {
-  left: 1600px;
-}*/
-
-/**
- * Buttons
- */
- .carousel-button {
-  padding: 0.25em;
-  border: none;
-}
-.carousel-button svg {
-  fill: var(--color-default-state);
-}
-
-.carousel-button:hover svg,
-.carousel-button:active svg {
-  fill: var(--color-hover-state);
-}
-
-.carousel-button.is-hidden {
-  display: none;
-}
-
+/****************************************************/
 
 /**
  * Dots
@@ -378,6 +433,7 @@ AND POSITION SLIDES WITH JS */
 }
 
 .carousel-dot {
+  border: none;
   width: 1em;
   height: 1em;
   padding: 0;
@@ -399,4 +455,136 @@ AND POSITION SLIDES WITH JS */
 
 .is-hidden {
   display: none;
+}
+
+
+@media (min-width: 40em) {
+
+  .testimonials-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .testimonial-heading {
+    flex-basis: 46%;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .testimonial-heading::before {
+    content: "";
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    background: var(--clr-accent-600);
+    border-radius: 50%;
+    z-index: -1;
+    top: -10px;
+    left: 0px;
+  }
+
+  .testimonial-heading .section-title {
+    font-size: var(--fs-122);
+  }
+  
+  .testimonial-heading,
+  .testimonial-heading p {
+    text-align: left;
+  }
+
+  /*******/
+  .carousel {
+    
+    
+    flex-basis: 54%;
+    
+    /*grid-template-columns: 2em 40vw 2em;/*use 80vh for respo
+    grid-template-rows: 15vh 3em;*/
+   
+    
+    
+  }
+
+  
+  
+  
+  
+  
+  .carousel-slide {
+    
+    
+    padding: 2em 0 2em 4em;
+    
+  }
+  
+}
+
+/*** landscape tablets 944px***/
+@media (min-width: 47em) {
+
+  .testimonial-heading {
+    
+    
+   
+  }
+
+
+  .carousel {
+    
+    
+   
+    
+    
+  }
+
+  .carousel {
+    
+    
+    
+  }
+}
+
+/*** landscape tablets 944px***/
+@media (min-width: 59em) {
+
+  /*.carousel-slide {
+    
+    
+    padding: 2em 0 2em 6em;
+    
+    width: 100%;
+    
+    
+  }*/
+  
+
+}
+
+
+/***Smaller Desktops 1200px*/
+@media (min-width: 70em) {
+ 
+  /*.carousel {
+    width: 90rem;
+    
+    
+    /*grid-template-columns: 2em 40vw 2em;/*use 80vh for respo
+    grid-template-rows: 15vh 3em;
+   
+    
+    
+  }*/
+}
+
+
+/**** (large) Desktop 1344px*/
+@media (min-width: 84em) {
+
+}
+/**** (large) Desktop 1344px*/
+@media (min-width: 1440px) {
+  
 }
