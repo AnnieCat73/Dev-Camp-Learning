@@ -1,3 +1,20 @@
+//MOBILE MENU IN HEADER
+
+//Get elements
+const closeBtn = document.querySelector(".close-nav");
+const openBtn = document.querySelector(".open-nav");
+const navMenu = document.querySelector(".menu-nav");
+
+//attach eventlisteners and toggle navigation-open class
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("navigation-open");
+});
+
+openBtn.addEventListener("click", () => {
+  navMenu.classList.add("navigation-open");
+});
+
+
 //CAROUSEL
 
 //Switching slides so when user clicks a button the carousel should move to
