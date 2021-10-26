@@ -269,7 +269,9 @@ span {
 
 .btn-light:hover,
 .btn-light:focus {
-  background-color: var(--clr-neutral-200);
+  background-color: var(--clr-accent-700);
+  color: var(--clr-primary-100);
+  
 }
 
 
@@ -517,7 +519,7 @@ section {
 
 .offer-item {
   background-color: var(--clr-secondary-800);
-  padding: 6rem 4rem;
+  padding: 1.7rem 1rem;
   flex-basis: 100%;
   text-align: center;
   border-radius: var(--br-100);
@@ -531,9 +533,9 @@ section {
   color: var(--clr-primary-100);
   background-color: var(--clr-accent-600);
   font-size: var(--fs-800);
-  padding: 1em;
+  padding: .6em;
   border-radius: 50%;
-  margin-bottom: .5em;
+  margin-bottom: .4em;
   display: inline-block;
 }
 
@@ -541,7 +543,7 @@ section {
   font-size: var(--fs-800);
   text-align: center;
   line-height: 1.4;
-  padding-top: .5em;
+  padding-top: .4em;
 }
 
 /* Hero images */
@@ -628,7 +630,7 @@ section {
   .offer-item {
     flex-basis: 48%;
     width: calc(100% / 2);
-    padding: 6rem 4rem;
+    
   }
   .offer-item:nth-last-child(4) {
     display: block;
