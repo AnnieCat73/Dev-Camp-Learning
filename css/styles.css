@@ -456,7 +456,7 @@ section {
 
 .hero {
   background-color: var(--clr-bg-300);
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   
 }
 
@@ -491,7 +491,7 @@ section {
 .check-items {
   display: flex;
   justify-content: center;
-  gap: 1.2em;
+  gap: 1.8em;
   margin-bottom: 3.5em;
 }
 
@@ -514,12 +514,12 @@ section {
   background-color: var(--clr-bg-300);
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em;
+  gap: 2.2em;
 }
 
 .offer-item {
   background-color: var(--clr-secondary-800);
-  padding: 1.7rem 1rem;
+  padding: 1.8rem 1rem;
   flex-basis: 100%;
   text-align: center;
   border-radius: var(--br-100);
@@ -648,6 +648,10 @@ section {
 }
 
 /************** COURSES ********************/
+
+.courses {
+  padding-top: 4rem;
+}
 
 .courses-container {
   display: flex;
