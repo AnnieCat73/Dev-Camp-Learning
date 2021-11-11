@@ -8,59 +8,60 @@
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
-
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-A responsive photo gallery created using CSS Grid
-
+I had an idea for a fictional landing page for an online course platform specialising in Web Development. I designed and coded it from scratch into a responsive live website.
 ### The challenge
 
-Creating a fun and simple responsive image gallery using CSS Grid.
+Users should be able to:
 
+- View the optimal layout for the site depending on their device's screen size.
+- See hover states for all interactive elements on the page.
+-Navigate between sections and/or pages.
+- Send email via the form in the contact section.
 ### Screenshot
 
 ![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
 ## My process
 
-- I wanted to create a responsive image gallery with CSS Grid.
-- The gallery was populated with images from Unsplash.com.
-- The gallery has different kinds of images.
-- If you refresh the page the gallery will upload new images for each image category.
-- By hovering over an image you will see which category it belongs to while it also animates!
-
+- Planning – who is this website for and its goals and target audience?
+- How can I accomplish its goal through my development and design options!
+- Draw mockups of components and sitemap, then decide which section and content to keep.
+- Which responsive layout pattern serves each section best, CSS Grid or Flexbox?
+- Are there any reusable components or classes we can use?
+- Mobile-first approach. I used CSS resets and CSS variables, then set global styles, utility classes, typography and layouts for each section.
+- Javascript added for interactivity.
 
 ### Built with
 
 - Semantic HTML5 markup
+- CSS resets
+- CSS custom properties
+- utility classes and reusable components
+- Flexbox
 - CSS Grid
-- CSS animation
-
+- Mobile-first workflow
+- Javascript for menu, carousel and sign up form
 
 ### What I learned
 
-I found this to be a good use case for CSS Grid. 
-
+After completing this project from scratch my CSS layout skills improved a lot and I got a lot of good practice in how to build and complete a project from the beginning to the end. This project was also a good way to incorporate utility classes to my CSS file.
 ### Continued development
 
-I will continue to improve my layout skills and get more comfortable with CSS Grid.
+I will continue to improve with my layout skills. My aim is to get more comfortable with CSS grid and add more Javascript for functionality!
 
+### Useful resources
 
-
+- This landing page was inspired by what I was taught in Kevin Powell’s CSS Demystified course. This course improved my CSS skills! My layout skills are transformed and I am forever grateful!
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
