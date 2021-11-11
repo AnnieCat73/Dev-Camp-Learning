@@ -299,7 +299,7 @@ section {
 }
 
 
-/****** COMPONENTS **********/
+/****** INDIVIDUAL SECTIONS **********/
 
 /* Header */
 
@@ -762,7 +762,7 @@ section {
 
 /* Landscape tablets 944px */
 @media (min-width: 59em) {
-
+  
   .course {
     flex-basis: 25%;
   }
@@ -834,7 +834,6 @@ section {
   line-height: 1.4;
 }
 
-
 /* Tablets */
 
 @media (min-width: 40em) {
@@ -844,7 +843,6 @@ section {
     margin-top: 2rem;
   }
 }
-
 
 /* Landscape tablets 944px */
 
@@ -1080,6 +1078,10 @@ section {
 
 /*************** FEATURED-IN *************/
 
+.featured-in .section-title {
+  font-size: var(--fs-116);
+}
+
 .featured-in {
   padding: 2rem;
 }
@@ -1178,7 +1180,7 @@ section {
 .plan .plans-span {
   color: var(--clr-secondary-800);
   font-size: var(--fs-400);
-  font-weight: var(fw-400);
+  font-weight: var(--fw-400);
 }
 
 .plan-detail {
