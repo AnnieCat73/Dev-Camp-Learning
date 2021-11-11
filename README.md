@@ -64,7 +64,7 @@ I will continue to improve with my layout skills. My aim is to get more comforta
 - This landing page was inspired by what I was taught in Kevin Powell’s CSS Demystified course. This course improved my CSS skills! My layout skills are transformed and I am forever grateful!
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Annie Indreiten](https://www.your-site.com)
 - Github – https://github.com/AnnieCat73
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - https://www.linkedin.com/in/annie-indreiten777/
 
