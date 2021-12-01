@@ -1,4 +1,4 @@
-/*CAROUSEL
+//CAROUSEL
 
 //Switching slides so when user clicks a button the carousel should move to
 //next or previous slide
@@ -130,4 +130,4 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 slides.forEach((slide, index) => {
   slide.style.left = slideWidth * index + "px";
-})*/
+})

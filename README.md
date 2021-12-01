@@ -25,7 +25,7 @@ Users should be able to:
 - Send email via the form in the contact section.
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./img/Dev-Camp-1png)
 
 ### Links
 
