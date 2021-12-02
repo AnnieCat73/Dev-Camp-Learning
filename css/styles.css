@@ -338,7 +338,7 @@ section {
   height: 8.5rem;
 }
 
-/* Hamburger */
+/* Hamburger menu */
 
 .open-nav {
   border: 0;
@@ -1200,9 +1200,6 @@ section {
  color: var(--clr-accent-800);
  font-size: var(--fs-200);
 }
-
-
-
 
 /* Tablets */
 

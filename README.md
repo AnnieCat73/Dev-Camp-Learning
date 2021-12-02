@@ -14,7 +14,7 @@
 
 ## Overview
 
-I had an idea for a fictional landing page for an online course platform specialising in Web Development. I designed and coded it from scratch into a responsive live website.
+I had an idea for a fictional landing page for an online course platform specialising in Web ( and design) Development. I designed and coded it from scratch into a responsive live website.
 ### The challenge
 
 Users should be able to:
@@ -29,12 +29,11 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 ## My process
 
 - Planning – who is this website for and its goals and target audience?
-- How can I accomplish its goal through my development and design options!
+- How can I accomplish its goal through my development and design options?
 - Draw mockups of components and sitemap, then decide which section and content to keep.
 - Which responsive layout pattern serves each section best, CSS Grid or Flexbox?
 - Are there any reusable components or classes we can use?
@@ -46,15 +45,15 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS resets
 - CSS custom properties
-- utility classes and reusable components
+- Utility classes and reusable components
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Javascript for menu, carousel and sign up form
+- Javascript for menu, carousel and sign-up form
 
 ### What I learned
 
-After completing this project from scratch my CSS layout skills improved a lot and I got a lot of good practice in how to build and complete a project from the beginning to the end. This project was also a good way to incorporate utility classes to my CSS file.
+After completing this project from scratch my CSS layout skills improved a lot and I got a lot of good practice in how to build and complete a project from the beginning to the end. This project was also a good way to incorporate utility classes to my CSS stylesheet.
 ### Continued development
 
 I will continue to improve with my layout skills. My aim is to get more comfortable with CSS grid and add more Javascript for functionality!
