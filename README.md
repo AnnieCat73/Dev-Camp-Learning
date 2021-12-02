@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://dev-camp-learning.pages.dev/
 ## My process
 
 - Planning – who is this website for and its goals and target audience?
